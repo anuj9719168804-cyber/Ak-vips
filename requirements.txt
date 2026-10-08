@@ -1,0 +1,7 @@
+kurigram>=2.2.26
+tgcrypto==1.2.5
+aiohttp>=3.9
+python-dotenv==1.0.0
+pymongo[srv]>=4.6
+cryptography>=42.0
+telethon>=1.36   # optional: only for the Diskwala token tier (SESSION env)
