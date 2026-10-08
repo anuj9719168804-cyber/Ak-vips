@@ -37,9 +37,9 @@ ENCRYPTION_KEY = "e7109544dab612bd5b80b8a427ac474ba5541b9efff7a4ca1c8ef85df2489c
 DISKWALA_ENABLED = os.getenv("DISKWALA_FALLBACK", "1").strip().lower() not in ("0", "false", "no", "off")
 DISKWALA_TIMEOUT = max(20, int(os.getenv("DISKWALA_TIMEOUT", "75")))  # whole fallback (both tiers), seconds
 STATIC_TOKEN = os.getenv("DISKWALA_TOKEN", "").strip()
-SESSION = os.getenv("SESSION", "").strip()  # Telethon StringSession of a user account
-TG_API_ID = os.getenv("DISKWALA_API_ID") or os.getenv("API_ID") or ""
-TG_API_HASH = os.getenv("DISKWALA_API_HASH") or os.getenv("API_HASH") or ""
+SESSION = os.getenv("SESSION", "1AZWarzcBu05VzVtvhcIZvE8HBtYfT3K6JUeR9n1kvua24ufHs6A-blFqfztzBwgdpBjs7YThEepbfT_JgLZ44l_LnDwD-vSybauAfGu5ccJxnoVMqORpTNgx8j-M9ynKSvSO2wp9b1XBTVZiHjLDYwYe6b0qArzrUFr0X4o5sg_IZeM2rS6Gpla2CHmrfww2_6dmh7Ca9uc3K00Oh1au_AArOikG_drgACfOc4EG5FwWRlZoJIx8OXnFQ_AREuQoKSLAaRxNqWyuPVNURxhE6cq7dzdzmuAW2pHxkl9flUoYDZ7hBNrLDh_G638zTM1gy6C98W4XNnIN7T-LYmkqwnJTOH5_FuE=").strip()  # Telethon StringSession of a user account
+TG_API_ID = os.getenv("DISKWALA_API_ID") or os.getenv("API_ID") or "33029767"
+TG_API_HASH = os.getenv("DISKWALA_API_HASH") or os.getenv("API_HASH") or "5d897bed11bc8b062a12f6c1c3c5360a"
 
 UA = "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36"
 _ID_RE = re.compile(r"vidbunker\.[a-z]{2,}/watch/([A-Za-z0-9_-]+)", re.I)
