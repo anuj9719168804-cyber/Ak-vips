@@ -71,14 +71,14 @@ def _req(name: str, default: str = "") -> str:
 # Hardcoded defaults (same as fbot's config.py) -- a real env var still overrides them.
 API_ID = int(_req("API_ID", "33029767"))
 API_HASH = _req("API_HASH", "5d897bed11bc8b062a12f6c1c3c5360a")
-BOT_TOKEN = _req("BOT_TOKEN", "8602199507:AAFGNdLmSexulxbQ4slqS7hLv1wSRIiPIQE")
+BOT_TOKEN = _req("BOT_TOKEN", "8975252650:AAFrOva2fQFp7cJlNa_JIZ9-kNVTFB9w22w")
 OWNER_ID = int(os.getenv("OWNER_ID", "8729304171") or 0)
 ADMINS = {OWNER_ID, *(int(x) for x in re.findall(r"\d+", os.getenv("ADMINS", "8931907813")))} - {0}
 LOG_CHANNEL = (os.getenv("LOG_CHANNEL", "-1004401290975") or "").strip()
 FORCE_SUB = [x.strip() for x in os.getenv("FORCE_SUB", "-1004401290975").split(",") if x.strip()]
 # fbot-style file cache: a private channel (bot must be admin) that keeps one copy of every uploaded file, so repeat requests are
 # served instantly with copy_message() instead of downloading again. Leave empty to cache by plain file_id only.
-_cc = os.getenv("CACHE_CHANNEL_ID", "").strip()
+_cc = os.getenv("CACHE_CHANNEL_ID", "-1004401290975").strip()
 CACHE_CHANNEL_ID = int(_cc) if re.fullmatch(r"-?\d+", _cc) else None
 FILE_CACHE = os.getenv("FILE_CACHE", "1").strip().lower() not in ("0", "false", "no", "off")  # FILE_CACHE=0 switches caching off
 # extra channels/groups (comma separated ids) that ALSO get a copy of every video, on top of LOG_CHANNEL and /set_channel_id ones
